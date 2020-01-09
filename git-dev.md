@@ -1,5 +1,11 @@
 # Git Development
 
+## Rename a file / folder
+
+    git mv old_filename new_filename
+
+---
+
 ## Tags
 
 ### Add tag to specific commit
