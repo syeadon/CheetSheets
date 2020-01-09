@@ -1,0 +1,36 @@
+# Bash
+
+## Move / Rename folders
+    mv foo bar
+
+You can use full path too:
+
+    mv /home/vivek/oldfolder /home/vivek/newfolder
+
+## GPG
+
+Import public key of someone
+
+```bash
+gpg --import some-one.key
+```
+
+See all imported public keys
+
+```bash
+gpg --list-keys
+```
+
+Encrypt a file
+
+```bash
+gpg --encrypt --armor -r some-one@server.com file.txt
+```
+
+## PDF
+
+Count the words of a PDF file:
+
+```bash
+pdftotext myfile.pdf - | wc -w
+```
