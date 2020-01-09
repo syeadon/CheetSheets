@@ -6,5 +6,6 @@ Write once read twice
 
 - [Bash](./bash.md)
 - [Git](./git.md)
+- [Git Flow](./gitflow.md)
 - [Visual Studio Code](./vscode.md)
 
