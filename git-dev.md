@@ -10,7 +10,7 @@
 
 When you have a new local branch which is tracking nothing,  you can do an initail push to an as yet null remote branch. Note the **-u** shorhand for **--set-upstream**
 	
-	git push -u origin feature/ice-foo
+	git push -u origin feature/name
 	
 ---
 
