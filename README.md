@@ -8,5 +8,6 @@ Write once read twice
 - [Git Config](./git-config.md)
 - [Git Usage](./git-dev.md)
 - [Git Flow](./git-flow.md)
+- [Git Lens](https://github.com/eamodio/vscode-gitlens/)
 - [Visual Studio Code](./vscode.md)
 
