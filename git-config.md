@@ -60,3 +60,13 @@ Set default key
     git config --global user.signingkey <key-id>
 
 ---
+
+## Git aliases
+
+An alias to seekdir aliases
+
+	git config --global alias.alias "! git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /"
+	
+Prettier git log
+
+	git config --global alias.logline "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"

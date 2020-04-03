@@ -6,12 +6,40 @@
 
 ---
 
+# Rename a branch 
+
+    git branch -m new_branch_name
+
+---
+
+## Revert unstaged files
+
+If you have unstaged (not in the index) files and you want rid of them all
+
+	git restore *
+
+---
+
+## Undo
+
+Link to a git [undo](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/) resource.
+	
+---    
+
 ## Push new local branch to remote
 
 When you have a new local branch which is tracking nothing,  you can do an initail push to an as yet null remote branch. Note the **-u** shorhand for **--set-upstream**
 	
 	git push -u origin feature/name
 	
+---
+
+## Stop tracking a remote
+
+This will stop your local branch from tracking a remote
+
+    git branch --unset-upstream
+
 ---
 
 ## Tags
@@ -70,6 +98,7 @@ See [stackoverflow](https://stackoverflow.com/questions/1459150/how-to-undo-git-
 
 ### If you want to see that you have the commit you didn't want to amend
     git log
+    git log --all --author="Stephen Yeadon" --pretty=format
 
 ### Retrieve our changes
     git stash pop
