@@ -56,6 +56,14 @@ Get a list of changed files between commits
     git diff --name-only HEAD~10 HEAD~5
     git diff --name-only HEAD^ HEAD
 
+Get the diff of a single file in a stash
+
+	git difftool stash@{0} -- path/to/file
+
+List files changed in a stash
+
+	git stash show
+	
 ---
 
 ## Logs
@@ -63,6 +71,22 @@ Get a list of changed files between commits
 Show commits on THIS branch only (assumes current branch taken from develop)
 
     git log develop..
+
+Show commits only belonging to you on the current branch
+
+   git log --author=me@mydomain.com
+
+Show which branch a commit was made on
+
+	git log 8f08c15..HEAD --ancestry-path --oneline --color
+
+or only the merges 
+
+	git log 8f08c15..HEAD --ancestry-path --merges --oneline --color
+	
+or this might work
+	
+	git name-rev 8f08c15
 
 ---
 

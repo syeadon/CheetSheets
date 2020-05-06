@@ -4,6 +4,12 @@
 
     git config --global user.name "Prename Name"
     git config --global user.email "email@example.com"
+	git config --global diff.tool bc
+	git config --global difftool.bc.path "c:/Program Files/Beyond Compare 4/bcomp.exe"
+	git config --global merge.tool bc
+	git config --global mergetool.bc.path "c:/Program Files/Beyond Compare 4/bcomp.exe"
+
+	git config --list
 
 Just remove the `--global` flag for local setup.
  Create a new repository
