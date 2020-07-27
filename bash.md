@@ -34,3 +34,9 @@ Count the words of a PDF file:
 ```bash
 pdftotext myfile.pdf - | wc -w
 ```
+
+## Aliases
+
+Load fork from the current directory
+
+	echo alias ll="/C/Users/syeadon/AppData/Local/Fork/Fork.exe '$(pwd -W)'" >> .bashrc

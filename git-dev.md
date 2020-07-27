@@ -90,6 +90,14 @@ or this might work
 
 ---
 
+## List Branch Authors
+
+This actually lists the last person to commit not the author see [stack overflow](https://stackoverflow.com/questions/12055198/find-out-a-git-branch-creator)
+
+	git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)%09%(align:25,left)%(color:yellow)%(authorname)%(end)%09%(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes
+
+---
+
 ## Delete local branches where the remote has gone
 
 Use carefully this forcibly deletes branches regardless or their merge status see https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote
@@ -131,3 +139,10 @@ See [stackoverflow](https://stackoverflow.com/questions/1459150/how-to-undo-git-
     git commit -m 
 
 ---
+
+## List branches and tags which contain a given commit
+
+This list all branches and tags which contain a given commit
+  
+    git branch -r --contains <<commit>>
+    git tag --contains  <<commit>>
