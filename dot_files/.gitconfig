@@ -1,0 +1,51 @@
+[user]
+	name = Stephen Yeadon
+	email = stephen.yeadon@domain.com
+[merge]
+	guitool = bc
+	tool = vsdiffmerge
+[diff]
+	guitool = bc
+	tool = vsdiffmerge
+[core]
+	editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+	pager = 
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+[credential]
+	helper = manager
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/Beyond Compare 4/BComp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" -o \"$MERGED\"
+	trustExitCode = true
+[difftool "bc"]
+	cmd = "\"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\""
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[mergetool "bc"]
+	cmd = "\"c:/program files/beyond compare 4/bcomp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+	path = c:/Program Files/Beyond Compare 4/bcomp.exe
+[difftool]
+	prompt = true
+[alias]
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	log-line  = "!f() { git log $@ --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit; echo '\n'; }; f"
+	log-line-top = "!f() { count=${1-20}}; git log-line -n $count; }; f"
+	llt = log-line-top
+	log-graph = "!f() { git log $@ --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit; echo '\n'; }; f"
+	log-graph-top = "!f() { count=${1-20}}; git log-graph -n $count; }; f"
+	lgt = log-graph-top
+	delete-untracked-branches ="!f() { git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D }; f"
+[difftool "vsdiffmerge"]
+	cmd = \"C:\\VS2019\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepBackup = false
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"C:\\VS2019\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepBackup = false
+	trustExitCode = true
