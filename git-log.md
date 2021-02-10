@@ -10,8 +10,8 @@ This will tell you the name of the branch the original commit was made on. You N
 
 List all branches and tags which contain a given commit
   
-    git branch -r --contains <<commit>>
-    git tag --contains  <<commit>>
+  git branch -r --contains <<commit>>
+  git tag --contains  <<commit>>
 
 ---
 
@@ -20,11 +20,15 @@ List all branches and tags which contain a given commit
 
 Show commits on THIS branch only (assumes current branch taken from develop)
 
-    git log develop..
+  git log develop..
+
+Show top 100 commits on a branch from a given date for a given author showing only file name details with no merges
+
+  git log --since="2001-01-01" --author="me@mydomain.com" -n 100 --name-status --no-merges
 
 Show commits only belonging to you on the current branch
 
-   git log --author=me@mydomain.com
+  git log --author=me@mydomain.com
 
 Show which branch a commit was made on
 

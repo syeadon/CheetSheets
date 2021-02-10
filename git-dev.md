@@ -17,6 +17,12 @@
 If you have unstaged (not in the index) files and you want rid of them all
 
     git restore *
+    
+## Revert a single unstaged file
+
+If you have unstaged file and you want rid of it
+
+    git restore ./myfile.ext
 
 ---
 
@@ -31,6 +37,12 @@ Link to a git [undo](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibi
 When you have a new local branch which is tracking nothing,  you can do an initail push to an as yet null remote branch. Note the **-u** shorhand for **--set-upstream**
 
   	git push -u origin feature/name
+
+---
+
+## Delete local tracking copies of the remotes
+
+    git remote update origin --prune
 
 ---
 

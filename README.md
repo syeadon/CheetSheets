@@ -7,7 +7,7 @@ Write once read twice
 - [Bash](./bash.md)
 - [Git Configuration](./git-config.md)
 - [Git Development](./git-dev.md)
-- [Git Diffing](./git-diff.md)
+- [Git Diff](./git-diff.md)
 - [Git Flow](./git-flow.md)
 - [Git Log](./git-log.md)
 - [Git Lens](https://github.com/eamodio/vscode-gitlens/)
