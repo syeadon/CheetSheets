@@ -32,15 +32,15 @@ Show commits only belonging to you on the current branch
 
 Show which branch a commit was made on
 
-	  git log 8f08c15..HEAD --ancestry-path --oneline --color
+    git log 8f08c15..HEAD --ancestry-path --oneline --color
 
 or only the merges 
 
-	  git log 8f08c15..HEAD --ancestry-path --merges --oneline --color
+    git log 8f08c15..HEAD --ancestry-path --merges --oneline --color
 	
 or this might work
 	
-	  git name-rev 8f08c15
+    git name-rev 8f08c15
 
 ---
 
